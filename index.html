@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        
+        <title>Deploy</title>
+		
+		<style id="style">
+			body {
+				background-color: rgb(192, 192, 192);
+				margin: 0px;
+				border: 0px;
+				user-select:none;
+				height: 100vh;
+  				width: 100vw;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			#script-description {
+				padding: 1%;
+				margin: 0px;
+			}
+			#description {
+				padding: 1%;
+				margin: 0px;
+			}
+			#attribution {
+				padding: 1%;
+				margin: 0px;
+			}
+			a:link {
+				color: purple;
+				background-color: transparent;
+			}
+			a:hover {
+				color: red;
+				background-color: transparent;
+			}
+			a:active {
+				color: white;
+				background-color: transparent;
+			}
+			#description {
+				color: black;
+			}
+			#top {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			#logo {
+				background-color: white;
+			}
+			#htitle {
+				justify-content: center;
+			}
+			h1 {
+				text-align: center;
+				font-size: 4em;
+				margin-block-start: 0px;
+				margin-block-end: 0px;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				font-weight: bold;
+			}
+			#logo {
+				background: #fff;
+				box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+				padding: 2px;
+				margin: 0;
+			}
+			h2, h3 {
+				font-size: 2em;
+				margin-block-start: 0px;
+				margin-block-end: 0px;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				font-weight: bold;
+			}
+			#window-body-body {
+				display: flex;
+				justify-content: flex-start;
+				margin: 10px;
+				align-items: center;
+			}
+			.flexbox {
+ 				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#window-body-body > div {
+				margin: 10px;
+			}
+			.inline-block-window {
+				text-align: center;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			.game-windows .inline-block-window {
+				width: auto;
+				max-width: 250px;
+			}
+			#script-holder, iframe {
+				padding: 3px 4px;
+				box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+			}
+			.p-footer {
+				text-align: center;
+				font-size: 2em;
+				margin-block-start: 0px;
+				margin-block-end: 0px;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				font-weight: bold;
+			}
+			#flex {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.game-windows {
+				display: flex;
+				justify-content: center;
+				width: fit-content;
+				margin: 0 auto;
+				gap: 2em;
+			}
+			.game-windows > div {
+				margin-right: 1em;
+				margin-left: 1em;
+			}
+			.explanationBox {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.explanationBox > p {
+				margin-block-start: 0.5em;
+				margin-block-end: 0.5em;
+			}
+			iframe {
+				width: 400px;
+				height: 400px;
+			}
+			#sixhundred {
+				width: 600px;
+				height: 600px;
+			}
+			.window {
+				flex-shrink: 0;
+			}
+		</style>
+		
+	    <link rel="stylesheet" href="/lib/98css/dist/style.css"></link>
+		<script type="module" src="https://q5js.org/q5.js"></script>
+		<script type="importmap">
+		{ "imports": {
+			"box2d3-wasm": "https://q5play.org/Box2D.deluxe.mjs"
+		} }
+		</script>
+		<script type="module" src="https://q5play.org/q5play.js"></script>
+
+		<script type="module" src="script.js"></script>
+    </head>
+
+    <body>
+		<div class="inline-block-window">
+			<div class="window">
+				<div id="top">
+					<div class="window">
+						<div class="title-bar">
+							<div class="img-and-title-text" style="display: flex">
+								<div class="title-bar-text">
+									Title
+								</div>
+							</div>
+							<div class="title-bar-controls">
+								<button aria-label="Minimize"></button>
+								<button aria-label="Maximize"></button>
+								<button aria-label="Close"></button>
+							</div>
+						</div>
+						<div class="window-body" id="flex">
+							<div id="title">
+								<div class="flexbox">
+									<h1 id="htitle">Deploy</h1>
+									<div class="window-body">
+										<div id="script-holder">
+											<!-- p5.js Canvas Here !! -->
+										</div>
+										<p style="margin-bottom: 0px">Click for an interactive demo!</p>
+									</div>
+								</div>
+								<p style="font-size: x-large">Build web games, modify others, <mark>get gaming accessories!</mark></p>
+								<button><p style="font-size: medium">Get Started</p></button>
+								<button><p style="font-size: medium">Game Hub</p></button>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="window">
+						<div class="title-bar">
+							<div class="img-and-title-text" style="display: flex">
+								<div class="title-bar-text">
+									Explanation
+								</div>
+							</div>
+							<div class="title-bar-controls">
+								<button aria-label="Minimize"></button>
+								<button aria-label="Maximize"></button>
+								<button aria-label="Close"></button>
+							</div>
+						</div>
+						<div id="explanation" class="window-body">
+							<h2 id="htitle">What is this?</h2>
+							<div class="flexbox">
+								<div class="window-body">
+									<div class="game-windows">
+										<div style="order: 0" class="inline-block-window">
+											<div class="window">
+												<div class="title-bar">
+													<div class="img-and-title-text" style="display: flex">
+														<div class="title-bar-text">
+															Game Hub!
+														</div>
+													</div>
+													<div class="title-bar-controls">
+														<button aria-label="Minimize"></button>
+														<button aria-label="Maximize"></button>
+														<button aria-label="Close"></button>
+													</div>
+												</div>
+												<div class="window-body">
+													<div class="explanationBox">
+														<p style="font-size: x-large">Learn how to make games!</p>
+														<p style="font-size: medium">With interactive, step-by-step guides, you'll learn how to make your own games in the browser using <a href="https://q5play.org">q5play</a>!</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div style="order: 1" class="inline-block-window">
+											<div class="window">
+												<div class="title-bar">
+													<div class="img-and-title-text" style="display: flex">
+														<div class="title-bar-text">
+															Play Games!
+														</div>
+													</div>
+													<div class="title-bar-controls">
+														<button aria-label="Minimize"></button>
+														<button aria-label="Maximize"></button>
+														<button aria-label="Close"></button>
+													</div>
+												</div>
+												<div class="window-body">
+													<div class="explanationBox">
+														<p style="font-size: x-large">Play and modify other games!</p>
+														<p style="font-size: medium">In our community game hub, you can find other games published by fellow teenagers hackers!<br>And because all games are open-source, you can learn from them or modify them to your heart's content!</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div style="order: 3" class="inline-block-window">
+											<div class="window">
+												<div class="title-bar">
+													<div class="img-and-title-text" style="display: flex">
+														<div class="title-bar-text">
+															Get Prizes!
+														</div>
+													</div>
+													<div class="title-bar-controls">
+														<button aria-label="Minimize"></button>
+														<button aria-label="Maximize"></button>
+														<button aria-label="Close"></button>
+													</div>
+												</div>
+												<div class="window-body">
+													<div class="explanationBox">
+														<p style="font-size: x-large">With every game, get free rewards!</p>
+														<p style="font-size: medium">With each game you create, you get Blocks to spend on awesome accessories like keyboards, headphones, and more!</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="window">
+						<div class="title-bar">
+							<div class="img-and-title-text" style="display: flex">
+								<div class="title-bar-text">
+									Prizes
+								</div>
+							</div>
+							<div class="title-bar-controls">
+								<button aria-label="Minimize"></button>
+								<button aria-label="Maximize"></button>
+								<button aria-label="Close"></button>
+							</div>
+						</div>
+						<div id="prizes" class="window-body">
+							<h2 id="htitle">Here are just some of the prizes you can get, just for coding!</h2>
+							<div class="flexbox">
+								<div class="window-body">
+									<div class="game-windows">
+										<div style="order: 0" class="inline-block-window">
+											<div class="window">
+												<div class="title-bar">
+													<div class="img-and-title-text" style="display: flex">
+														<div class="title-bar-text">
+															Keychron Keyboard!
+														</div>
+													</div>
+													<div class="title-bar-controls">
+														<button aria-label="Minimize"></button>
+														<button aria-label="Maximize"></button>
+														<button aria-label="Close"></button>
+													</div>
+												</div>
+												<div class="window-body">
+													<div class="window-body">
+														<img src="https://user-cdn.hackclub-assets.com/019d850e-3128-718c-b134-41e15b374b43/Keychron-K2-Version-2-keyboard-backlit-wireless-USB-Bluetooth-5-1-key-switch-Gateron-G-Pro-Brown_a3c9658d-3b74-46e2-b543-c54d3079a2e8.1e50e87a62122acdd2c662146b9d5463.avif" alt="Keychron Keyboard" style="width: 100%; height: auto"></img>
+													</div>
+													<p style="font-size: large">500 Blocks!</p>
+												</div>
+											</div>
+										</div>
+										<div style="order: 1" class="inline-block-window">
+											<div class="window">
+												<div class="title-bar">
+													<div class="img-and-title-text" style="display: flex">
+														<div class="title-bar-text">
+															Logitech Mouse!
+														</div>
+													</div>
+													<div class="title-bar-controls">
+														<button aria-label="Minimize"></button>
+														<button aria-label="Maximize"></button>
+														<button aria-label="Close"></button>
+													</div>
+												</div>
+												<div class="window-body">
+													<div class="window-body">
+														<img src="https://m.media-amazon.com/images/I/61LaIVlVOwL.jpg" alt="Logitech Mouse" style="width: 100%; height: auto"></img>
+													</div>
+													<p style="font-size: large">1000 Blocks!</p>
+												</div>
+											</div>
+										</div>
+										<div style="order: 3" class="inline-block-window">
+											<div class="window">
+												<div class="title-bar">
+													<div class="img-and-title-text" style="display: flex">
+														<div class="title-bar-text">
+															Refurbished Airpods Pro!
+														</div>
+													</div>
+													<div class="title-bar-controls">
+														<button aria-label="Minimize"></button>
+														<button aria-label="Maximize"></button>
+														<button aria-label="Close"></button>
+													</div>
+												</div>
+												<div class="window-body">
+													<div class="window-body">
+														<img src="https://m.media-amazon.com/images/I/61sRKTAfrhL.jpg" alt="Refurbished Airpods Pro" style="width: 100%; height: auto"></img>
+													</div>
+													<p style="font-size: large">1000 Blocks!</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="window">
+							<div class="title-bar">
+								<div class="img-and-title-text" style="display: flex">
+									<div class="title-bar-text">
+										Footer
+									</div>
+								</div>
+								<div class="title-bar-controls">
+									<button aria-label="Minimize"></button>
+									<button aria-label="Maximize"></button>
+									<button aria-label="Close"></button>
+								</div>
+							</div>
+							<div id="explanation" class="window-body">
+								<div class="flexbox">
+									<div class="window-body">
+										<ul class="tree-view">
+											<li><p class="p-footer"><a href="https://github.com/chardynamics/deploy-proposal">GitHub</a></p></li>
+											<li><p class="p-footer"><a href="https://hackclub.com/">Hack Club</a></p></li>		
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </body>
+</html>
